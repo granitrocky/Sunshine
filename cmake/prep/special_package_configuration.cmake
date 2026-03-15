@@ -8,6 +8,9 @@ if(APPLE)
     if(${SUNSHINE_CONFIGURE_PORTFILE})
         configure_file(packaging/macos/Portfile Portfile @ONLY)
     endif()
+elseif(ANDROID)
+  # TODO: build apk
+  # TODO: build termux package
 elseif(UNIX)
     # configure the .desktop file
     set(SUNSHINE_DESKTOP_ICON "${PROJECT_FQDN}")

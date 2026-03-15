@@ -48,6 +48,8 @@ elseif(UNIX)
 
     if(APPLE)
         include(${CMAKE_MODULE_PATH}/compile_definitions/macos.cmake)
+    elseif(ANDROID)
+        include(${CMAKE_MODULE_PATH}/compile_definitions/android.cmake)
     else()
         include(${CMAKE_MODULE_PATH}/compile_definitions/linux.cmake)
     endif()

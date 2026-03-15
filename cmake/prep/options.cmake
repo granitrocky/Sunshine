@@ -41,6 +41,11 @@ endif()
 if(APPLE)
     option(SUNSHINE_CONFIGURE_PORTFILE
             "Configure macOS Portfile. Recommended to use with SUNSHINE_CONFIGURE_ONLY" OFF)
+elseif(ANDROID)
+    option(SUNSHINE_ENABLE_DRM
+            "Enable KMS grab if available." ON)
+    option(SUNSHINE_ENABLE_VAAPI
+            "Enable building vaapi specific code." ON)
 elseif(UNIX)  # Linux
     option(SUNSHINE_BUILD_APPIMAGE
             "Enable an AppImage build." OFF)
@@ -49,8 +54,8 @@ elseif(UNIX)  # Linux
     option(SUNSHINE_CONFIGURE_PKGBUILD
             "Configure files required for AUR. Recommended to use with SUNSHINE_CONFIGURE_ONLY" OFF)
     option(SUNSHINE_CONFIGURE_FLATPAK_MAN
-            "Configure manifest file required for Flatpak build. Recommended to use with SUNSHINE_CONFIGURE_ONLY" OFF)
-
+      "Configure manifest file required for Flatpak build. Recommended to use with SUNSHINE_CONFIGURE_ONLY" OFF)
+    
     # Linux capture methods
     option(SUNSHINE_ENABLE_CUDA
             "Enable cuda specific code." ON)

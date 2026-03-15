@@ -49,6 +49,8 @@ elseif(UNIX)
 
     if(APPLE)
         include("${CMAKE_MODULE_PATH}/dependencies/macos.cmake")
+    elseif(ANDROID)
+        include("${CMAKE_MODULE_PATH}/dependencies/android.cmake")
     else()
         include("${CMAKE_MODULE_PATH}/dependencies/linux.cmake")
     endif()

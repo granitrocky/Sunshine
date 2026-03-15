@@ -5,6 +5,8 @@ elseif (APPLE)
         set(CMAKE_INSTALL_RPATH "")
         set(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
     endif()
+elseif(ANDROID)
+    # TODO: Android - Libraries and constants
 elseif (UNIX)
     include(GNUInstallDirs)
 

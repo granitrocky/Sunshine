@@ -18,6 +18,8 @@ elseif(UNIX)
 
     if(APPLE)
         include(${CMAKE_MODULE_PATH}/targets/macos.cmake)
+    elseif(ANDROID)
+        include(${CMAKE_MODULE_PATH}/targets/android.cmake)
     else()
         include(${CMAKE_MODULE_PATH}/targets/linux.cmake)
     endif()
